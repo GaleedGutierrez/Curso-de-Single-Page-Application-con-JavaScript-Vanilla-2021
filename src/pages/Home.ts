@@ -1,4 +1,4 @@
-const Home = (): string => {
+const home = (): string => {
 	const VIEW = `
 	<div class="main__characters">
 		<article class="characters__item">
@@ -13,4 +13,4 @@ const Home = (): string => {
 	return VIEW;
 };
 
-export default Home;
+export default home;
