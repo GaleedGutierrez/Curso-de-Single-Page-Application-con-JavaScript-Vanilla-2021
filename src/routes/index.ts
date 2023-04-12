@@ -11,7 +11,7 @@ const ROUTES = {
 	// '/contact' : 'Contact'
 };
 
-const router = (): void => {
+const router = async (): Promise<void> => {
 	const HEADER = document.getElementById('header') as HTMLElement;
 	const CONTENT = document.getElementById('main__content') as HTMLElement;
 	const HASH = getHash();
@@ -21,8 +21,7 @@ const router = (): void => {
 		: error404;
 
 	HEADER.innerHTML = header();
-	CONTENT.innerHTML = render();
-
+	CONTENT.innerHTML = await render() ?? error404();
 };
 
 export default router;
