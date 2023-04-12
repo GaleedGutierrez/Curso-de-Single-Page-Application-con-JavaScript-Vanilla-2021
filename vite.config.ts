@@ -2,9 +2,14 @@ import { UserConfigExport, defineConfig } from 'vite';
 // import { resolve } from 'path';
 
 const config: UserConfigExport = {
-	root  : './public/',
+	base   : './',
+	server : {
+		open : '/public/',
+	},
 	build : {
-		outDir : '../dist/'
+		rollupOptions : {
+			input : './public/index.html',
+		}
 	}
 };
 
