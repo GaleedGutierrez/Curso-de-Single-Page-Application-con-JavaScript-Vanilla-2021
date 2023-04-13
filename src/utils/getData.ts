@@ -1,15 +1,17 @@
-import { IRickAndMortyApi } from './interface';
+import { IDataCharacter, IRickAndMortyApi } from './interface';
 
 const API = 'https://rickandmortyapi.com/api/character';
 
-const getData = async (id?: string): Promise<IRickAndMortyApi | undefined> => {
+const getData = async (id?: string) => {
 	const API_URL = (id)
 		? `${API}/${id}`
 		: API;
 
 	try {
 		const RESPONSE = await fetch(API_URL);
-		const DATA: IRickAndMortyApi = await RESPONSE.json();
+		const DATA = (id)
+			? await RESPONSE.json() as IRickAndMortyApi
+			: await RESPONSE.json() as IDataCharacter;
 
 		return DATA;
 	} catch (error) {

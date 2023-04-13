@@ -17,8 +17,8 @@ export interface IDataCharacter {
 	species: ESpecies;
 	type: string;
 	gender: EGender;
-	origin: Location;
-	location: Location;
+	origin: ILocation;
+	location: ILocation;
 	image: string;
 	episode: string[];
 	url: string;

@@ -1,8 +1,8 @@
 import getData from '../utils/getData';
-import { IDataCharacter } from '../utils/interface';
+import { IDataCharacter, IRickAndMortyApi } from '../utils/interface';
 
 const home = async () => {
-	const CHARACTERS_API = await getData();
+	const CHARACTERS_API = await getData() as IRickAndMortyApi;
 	const CHARACTERS = CHARACTERS_API?.results;
 
 	if (!CHARACTERS) return;
