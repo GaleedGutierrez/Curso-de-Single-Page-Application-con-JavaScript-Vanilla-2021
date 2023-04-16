@@ -1,6 +1,20 @@
 import getData from '../utils/getData';
 import { IDataCharacter, IRickAndMortyApi } from '../utils/interface';
 
+const setCharacters = (character: IDataCharacter) => {
+	const { id, image, name } = character;
+	const RESULT = `
+		<article class="characters__item">
+			<a href="#/${id}/">
+				<img src="${image}" alt="${name}"/>
+				<h2>${name}</h2>
+			</a>
+		</article>
+	`;
+
+	return RESULT;
+};
+
 const home = async () => {
 	const CHARACTERS_API = await getData() as IRickAndMortyApi;
 	const CHARACTERS = CHARACTERS_API?.results;
@@ -15,20 +29,6 @@ const home = async () => {
 	`;
 
 	return VIEW;
-};
-
-const setCharacters = (character: IDataCharacter) => {
-	const { id, image, name } = character;
-	const RESULT = `
-		<article class="characters__item">
-			<a href="#/${id}/">
-				<img src="${image}" alt="${name}"/>
-				<h2>${name}</h2>
-			</a>
-		</article>
-	`;
-
-	return RESULT;
 };
 
 export default home;

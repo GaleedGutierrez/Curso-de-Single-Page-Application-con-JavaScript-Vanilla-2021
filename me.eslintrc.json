@@ -1,4 +1,5 @@
 {
+	// "root": true,
 	"env": {
 		"es2022": true,
 		"browser": true,
@@ -7,7 +8,9 @@
 	},
 	"extends": [
 		"eslint:recommended",
-		"plugin:@typescript-eslint/recommended"
+		"plugin:@typescript-eslint/recommended",
+		"plugin:import/recommended",
+		"plugin:import/typescript"
 	],
 	"overrides": [
 	],
@@ -17,7 +20,11 @@
 		"sourceType": "module"
 	},
 	"plugins": [
-		"@typescript-eslint"
+		"@typescript-eslint",
+		"import",
+		"simple-import-sort",
+		"unused-imports",
+		"folders"
 	],
 	"rules": {
 		"semi": ["error", "always"],
@@ -151,9 +158,47 @@
 					"format": ["PascalCase"],
 					"prefix": ["E"]
 				}
+			],
 
-			]
-		}
+		// Codely: plugins
+		"import/first": "error",
+		"import/newline-after-import": "error",
+		"import/no-duplicates": "error",
+		"import/no-unresolved": "error",
+		"import/no-webpack-loader-syntax": "error",
+		"simple-import-sort/imports": "error",
+		"simple-import-sort/exports": "error",
+
+		// "folders/match-regex": ["error", "^[a-z-]+$", `${process.cwd()}/`],
+
+		// ya incorporado en eslint (lo ponemos a prueba)
+		"unused-imports/no-unused-imports": "error",
+		"unused-imports/no-unused-vars": [
+		"warn",
+			{
+				"vars": "all",
+				"varsIgnorePattern": "^_",
+				"args": "after-used",
+				"argsIgnorePattern": "^_"
+			}
+		],
+
+
+
+		// Codely: error prevention
+		"array-callback-return": ["error", { "checkForEach": true }],
+		"no-await-in-loop": "error",
+		"no-constant-binary-expression": "error",
+		"no-constructor-return": "error",
+		"no-promise-executor-return": "error",
+		"no-self-compare": "error",
+		"no-template-curly-in-string": "error",
+		"no-unmodified-loop-condition": "error",
+		"no-unreachable-loop": "error",
+		"no-unused-private-class-members": "error",
+		"no-use-before-define": "error",
+		"require-atomic-updates": "error"
+	}
 		// "@typescript-eslint/comma-dangle": ["error", "only-multiline"]
 	// "hexagonal-architecture/enforce": ["error"]
 }

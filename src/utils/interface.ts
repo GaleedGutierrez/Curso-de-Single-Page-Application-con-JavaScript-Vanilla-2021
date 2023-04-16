@@ -1,14 +1,25 @@
-export interface IRickAndMortyApi {
-	info: IInfo;
-	results: IDataCharacter[];
+export enum ESpecies {
+	Alien = 'Alien',
+	Human = 'Human',
 }
 
-export interface IInfo {
-	count: number;
-	pages: number;
-	next: string;
-	prev: null;
+export enum EStatus {
+	Alive = 'Alive',
+	Dead = 'Dead',
+	Unknown = 'unknown',
 }
+
+export enum EGender {
+	Female = 'Female',
+	Male = 'Male',
+	Unknown = 'unknown',
+}
+
+export interface ILocation {
+	name: string;
+	url: string;
+}
+
 
 export interface IDataCharacter {
 	id: number;
@@ -25,24 +36,14 @@ export interface IDataCharacter {
 	created: Date;
 }
 
-export enum EGender {
-	Female = 'Female',
-	Male = 'Male',
-	Unknown = 'unknown',
+export interface IInfo {
+	count: number;
+	pages: number;
+	next: string;
+	prev: null;
 }
 
-export interface ILocation {
-	name: string;
-	url: string;
-}
-
-export enum ESpecies {
-	Alien = 'Alien',
-	Human = 'Human',
-}
-
-export enum EStatus {
-	Alive = 'Alive',
-	Dead = 'Dead',
-	Unknown = 'unknown',
+export interface IRickAndMortyApi {
+	info: IInfo;
+	results: IDataCharacter[];
 }
