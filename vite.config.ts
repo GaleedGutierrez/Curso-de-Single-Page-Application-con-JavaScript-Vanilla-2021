@@ -1,4 +1,4 @@
-import { UserConfigExport, defineConfig } from 'vite';
+import { defineConfig, UserConfigExport } from 'vite';
 // import { resolve } from 'path';
 
 const config: UserConfigExport = {
