@@ -1,5 +1,5 @@
-import getHash from '../utils/getHash';
 import getData from '../utils/getData';
+import getHash from '../utils/getHash';
 import { IDataCharacter } from '../utils/interface';
 
 const character = async (): Promise<string> => {
