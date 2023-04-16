@@ -1,7 +1,7 @@
-import header from '../templates/Header';
-import home from '../pages/Home';
 import character from '../pages/Character';
 import error404 from '../pages/Error404';
+import home from '../pages/Home';
+import header from '../templates/Header';
 import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/resolveRoutes';
 
