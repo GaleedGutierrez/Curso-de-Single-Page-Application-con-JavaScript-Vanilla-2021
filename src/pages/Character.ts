@@ -4,8 +4,9 @@ import { IDataCharacter } from '../utils/interface';
 
 const character = async (): Promise<string> => {
 	const ID = getHash();
-	const CHARACTER = await getData(ID) as IDataCharacter;
-	const { image, name, episode, status, species, gender, origin, location } = CHARACTER;
+	const CHARACTER = (await getData(ID)) as IDataCharacter;
+	const { image, name, episode, status, species, gender, origin, location } =
+		CHARACTER;
 
 	const CHARACTERISTICS = `
 		<h3>Episodes: <span>${episode.length}</span></h3>

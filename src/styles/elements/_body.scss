@@ -1,0 +1,7 @@
+@use "../settings/variables";
+
+body {
+	font-family: variables.$primary-font;
+	font-size: variables.$fs-body-md;
+	color: variables.$text-color;
+}
