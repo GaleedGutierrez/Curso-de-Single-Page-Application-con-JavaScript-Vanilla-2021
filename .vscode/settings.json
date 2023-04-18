@@ -22,5 +22,6 @@
     "cSpell.words": [
         "Morty",
         "tifi"
-    ]
+    ],
+	"stylelint.validate": ["scss"]
 }

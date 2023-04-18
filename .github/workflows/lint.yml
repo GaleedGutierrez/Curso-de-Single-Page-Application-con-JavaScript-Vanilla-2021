@@ -15,3 +15,6 @@ jobs:
 
       - name: 💅 Lint
         run: npm run lint:fix
+
+      - name: 💄 StyleLint
+        run: npm run stylelint

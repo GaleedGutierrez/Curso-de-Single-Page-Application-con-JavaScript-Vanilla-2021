@@ -1,0 +1,13 @@
+@use "../tools/mixins";
+
+h1 {
+	@include mixins.heading-4xl;
+}
+
+h2 {
+	@include mixins.heading-3xl;
+}
+
+h3 {
+	@include mixins.heading-2xl;
+}

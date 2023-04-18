@@ -6,8 +6,8 @@ import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/resolveRoutes';
 
 const ROUTES = {
-	'/'    : home,
-	'/:id' : character,
+	'/': home,
+	'/:id': character,
 	// '/contact' : 'Contact'
 };
 
@@ -16,12 +16,12 @@ const router = async (): Promise<void> => {
 	const CONTENT = document.getElementById('main__content') as HTMLElement;
 	const HASH = getHash();
 	const ROUTE = resolveRoutes(HASH);
-	const render = (ROUTES[ROUTE as keyof typeof ROUTES])
+	const render = ROUTES[ROUTE as keyof typeof ROUTES]
 		? ROUTES[ROUTE as keyof typeof ROUTES]
 		: error404;
 
 	HEADER.innerHTML = header();
-	CONTENT.innerHTML = await render() ?? error404();
+	CONTENT.innerHTML = (await render()) ?? error404();
 };
 
 export default router;

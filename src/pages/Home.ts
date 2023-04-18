@@ -16,12 +16,14 @@ const setCharacters = (character: IDataCharacter) => {
 };
 
 const home = async () => {
-	const CHARACTERS_API = await getData() as IRickAndMortyApi;
+	const CHARACTERS_API = (await getData()) as IRickAndMortyApi;
 	const CHARACTERS = CHARACTERS_API?.results;
 
 	if (!CHARACTERS) return;
 
-	const CHARACTERS_HTML = CHARACTERS.map((character) => setCharacters(character));
+	const CHARACTERS_HTML = CHARACTERS.map((character) =>
+		setCharacters(character)
+	);
 	const VIEW = `
 		<div class="main__characters">
 			${CHARACTERS_HTML.join('')}
