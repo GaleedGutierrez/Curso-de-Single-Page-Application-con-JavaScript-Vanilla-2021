@@ -8,7 +8,20 @@
 		"selector-class-pattern": "^[a-z]([-]?[a-z0-9]+)*(__[a-z0-9]([-]?[a-z0-9]+)*)?(--[a-z0-9]([-]?[a-z0-9]+)*)?$",
 		"declaration-colon-space-after": "always-single-line",
 		"function-comma-space-after": "always",
-		"order/order": ["custom-properties", "declarations"],
+		"selector-list-comma-newline-after": "always",
+		"block-opening-brace-space-before": "always",
+		"string-quotes": "double",
+		"order/order": [
+			"custom-properties",
+			"dollar-variables",
+			"declarations",
+			"rules",
+			"at-rules"
+		],
+		"declaration-block-no-redundant-longhand-properties": [
+			true,
+			{ "ignoreShorthands": ["/grid/"] }
+		],
 		"order/properties-order": [
 			"position",
 			"left",
@@ -23,7 +36,6 @@
 			"grid-area",
 			"grid-column",
 			"grid-row",
-			"grid-template-areas",
 			"grid-template-columns",
 			"grid-template-rows",
 			"grid-auto-columns",
@@ -33,6 +45,7 @@
 			"grid-column-end",
 			"grid-row-start",
 			"grid-row-end",
+			"grid-template-areas",
 
 			"flex",
 			"flex-direction",
@@ -159,6 +172,7 @@
 			"background-blend-mode",
 
 			"font-family",
+			"src",
 			"font-size",
 			"font-weight",
 			"font-style",
@@ -180,7 +194,30 @@
 			"font-variation-settings",
 
 			"color",
+
+			"text-align",
+			"text-align-last",
+			"text-combine-upright",
+			"text-decoration",
+			"text-decoration-color",
+			"text-decoration-line",
+			"text-decoration-style",
+			"text-emphasis",
+			"text-emphasis-color",
+			"text-emphasis-position",
+			"text-emphasis-style",
+			"text-indent",
+			"text-justify",
+			"text-orientation",
+			"text-overflow",
+			"text-rendering",
+			"text-shadow",
+			"text-transform",
+			"text-underline-position",
+
 			"shadow-box",
+
+			"scroll-behavior",
 
 			"transition",
 			"transition-property",
@@ -193,7 +230,17 @@
 			"transform-style",
 			"transform-box"
 		],
-		"unit-allowed-list": ["rem", "%" , "ms", "deg", "vh", "vw", "fr", "em", "px"],
+		"unit-allowed-list": [
+			"rem",
+			"%",
+			"ms",
+			"deg",
+			"vh",
+			"vw",
+			"fr",
+			"em",
+			"px"
+		],
 		"scss/dollar-variable-pattern": "^^_?[a-z0-9]+(-[a-z0-9]+)*$"
 	}
 }

@@ -1,0 +1,22 @@
+@use "../settings/variables";
+
+.a-btn {
+	display: inline-block;
+	padding: variables.$space-5;
+	border: 0;
+	border-radius: variables.$space-2;
+	font-weight: variables.$weight-medium;
+	color: variables.$text-color;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&--primary {
+		background-color: variables.$primary-color;
+	}
+
+	&--block {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+}

@@ -1,0 +1,91 @@
+@use "../settings/variables";
+
+$dark-color: variables.$dark-color;
+$white-color: variables.$white-color;
+
+.m-card {
+	position: relative;
+	display: inline-flex;
+	overflow: hidden;
+	border-radius: variables.$border-radius-3;
+
+	&__link-container {
+		display: inline-flex;
+	}
+
+	&__character-name-container {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 50%;
+	}
+
+	&__character-name {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: variables.$space-3;
+	}
+}
+
+.m-card--primary {
+	&__link-container:hover .m-card__character-name,
+	&__link-container:focus .m-card__character-name {
+		color: variables.$primary-color;
+	}
+
+	&__character-name-container {
+		border-end-start-radius: variables.$border-radius-3;
+		border-end-end-radius: variables.$border-radius-3;
+		background: linear-gradient(to top, rgb($dark-color, 65%), rgb($dark-color, 0%));
+	}
+
+	&__character-name {
+		color: variables.$text-color;
+	}
+}
+
+.m-card-details {
+	max-width: 30rem;
+	border-radius: variables.$border-radius-3;
+	background-color: variables.$background-dark-color;
+	overflow: hidden;
+	box-shadow: 0 0 1.2rem 0.2rem rgb($white-color, 25%);
+
+	&__info-container {
+		padding: variables.$space-5;
+	}
+
+	&__name {
+		margin-block-end: variables.$space-4;
+	}
+
+	&__data-container {
+		display: flex;
+		gap: variables.$space-2;
+		flex-direction: column;
+		height: 100%;
+	}
+}
+
+@media (width >= 720px) {
+	.m-card-details {
+		display: grid;
+		gap: variables.$space-5;
+		grid-template-columns: 30rem 1fr;
+		width: fit-content;
+		max-width: initial;
+
+		&__name {
+			margin-block-end: 0;
+		}
+
+		&__info-container {
+			display: flex;
+			gap: variables.$space-4;
+			flex-direction: column;
+			padding-block: variables.$space-5;
+			padding-inline: 0 variables.$space-5;
+		}
+	}
+}

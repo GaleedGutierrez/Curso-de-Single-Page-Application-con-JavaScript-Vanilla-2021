@@ -13,7 +13,7 @@ jobs:
       - name: 📥 Install Dependencies
         run: npm install
 
-      - name: 💅 Lint
+      - name: 🌹 ESLint
         run: npm run lint:fix
 
       - name: 💄 StyleLint
