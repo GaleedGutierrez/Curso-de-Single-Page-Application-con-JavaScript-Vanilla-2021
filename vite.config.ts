@@ -9,8 +9,8 @@ const config: UserConfigExport = {
 		host: true,
 	},
 	build: {
-		sourcemap: true,
-		manifest: true,
+		// sourcemap: true,
+		// manifest: true,
 		rollupOptions: {
 			input: {
 				index: resolve(__dirname, './public/index.html'),

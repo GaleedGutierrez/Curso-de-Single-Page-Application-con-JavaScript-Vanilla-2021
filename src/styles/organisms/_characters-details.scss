@@ -1,0 +1,6 @@
+@use "../settings/variables";
+@use "../tools/mixins";
+
+.g-main__character-details {
+	@include mixins.center-flex(column);
+}

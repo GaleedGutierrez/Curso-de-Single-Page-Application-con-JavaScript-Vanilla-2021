@@ -1,8 +1,8 @@
-const error404 = () => {
+const error404 = (): string => {
 	const VIEW = `
-	<div class="error-404">
-		<h2>Error 404</h2>
-	</div>
+	<section>
+		<h2 class="u-error-404">Error 404 🤔</h2>
+	</section>
 	`;
 
 	return VIEW;

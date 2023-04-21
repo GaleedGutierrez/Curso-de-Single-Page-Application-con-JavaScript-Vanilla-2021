@@ -5,6 +5,8 @@ import header from '../templates/Header';
 import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/resolveRoutes';
 
+const $ = (selector: string) => document.querySelector(selector);
+
 const ROUTES = {
 	'/': home,
 	'/:id': character,
@@ -12,8 +14,8 @@ const ROUTES = {
 };
 
 const router = async (): Promise<void> => {
-	const HEADER = document.getElementById('header') as HTMLElement;
-	const CONTENT = document.getElementById('main__content') as HTMLElement;
+	const HEADER = $('#header') as HTMLElement;
+	const CONTENT = $('#main__content') as HTMLElement;
 	const HASH = getHash();
 	const ROUTE = resolveRoutes(HASH);
 	const render = ROUTES[ROUTE as keyof typeof ROUTES]

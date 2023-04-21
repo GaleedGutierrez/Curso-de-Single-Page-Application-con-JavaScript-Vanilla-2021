@@ -1,0 +1,9 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+@media screen and (width >= 768px) {
+	// Molecules
+	@import "./molecules/card-tablet";
+
+	// Organisms
+	@import "./organisms/header-tablet";
+	@import "./organisms/characters-tablet";
+}
