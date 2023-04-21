@@ -1,0 +1,8 @@
+@use "../settings/variables";
+
+.g-main__characters {
+	display: grid;
+	gap: variables.$space-5;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	place-content: center;
+}

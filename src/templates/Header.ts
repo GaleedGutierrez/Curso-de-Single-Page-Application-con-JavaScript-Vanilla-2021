@@ -1,19 +1,17 @@
 const Header = (): string => {
 	const VIEW = `
-	<div class="header-main">
-		<div class="header__logo">
-			<h1>
-				<a href="/">
+		<section class="g-header__logo">
+			<a href="./index.html">
+				<h1>
 					100tifi.co
-				</a>
-			</h1>
-		</div>
-		<nav class="header__nav">
+				</h1>
+			</a>
+		</section>
+		<nav class="g-header__nav">
 			<a href="#/about">
 				About
 			</a>
 		</nav>
-	</div>
 	`;
 
 	return VIEW;

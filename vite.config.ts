@@ -1,15 +1,24 @@
+import { resolve } from 'path';
 import { defineConfig, UserConfigExport } from 'vite';
-// import { resolve } from 'path';
 
 const config: UserConfigExport = {
 	base: './',
-	// server: {
-	// 	open: '/public/',
-	// },
+	server: {
+		open: '/public/',
+		port: 8080,
+		host: true,
+	},
 	build: {
+		// sourcemap: true,
+		// manifest: true,
 		rollupOptions: {
-			// input: './public/index.html',
-			input: './borrar.html',
+			input: {
+				index: resolve(__dirname, './public/index.html'),
+				'guide-styles': resolve(
+					__dirname,
+					'./public/guide-styles.html'
+				),
+			},
 		},
 	},
 };

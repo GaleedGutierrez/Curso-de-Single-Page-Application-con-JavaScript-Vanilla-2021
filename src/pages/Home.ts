@@ -4,10 +4,14 @@ import { IDataCharacter, IRickAndMortyApi } from '../utils/interface';
 const setCharacters = (character: IDataCharacter) => {
 	const { id, image, name } = character;
 	const RESULT = `
-		<article class="characters__item">
-			<a href="#/${id}/">
-				<img src="${image}" alt="${name}"/>
-				<h2>${name}</h2>
+		<article class="m-card m-card--primary">
+			<a href="#/${id}/" class="m-card__link-container m-card--primary__link-container">
+				<figure>
+					<img src="${image}" alt="${name}" class="m-card__img" />
+				</figure>
+				<div class="m-card__character-name-container m-card--primary__character-name-container">
+					<h2 class="m-card__character-name m-card--primary__character-name">${name}</h2>
+				</div>
 			</a>
 		</article>
 	`;
@@ -25,9 +29,9 @@ const home = async () => {
 		setCharacters(character)
 	);
 	const VIEW = `
-		<div class="main__characters">
+		<section class="g-main__characters">
 			${CHARACTERS_HTML.join('')}
-		</div>
+		</section>
 	`;
 
 	return VIEW;

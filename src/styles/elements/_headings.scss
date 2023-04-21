@@ -11,3 +11,11 @@ h2 {
 h3 {
 	@include mixins.heading-2xl;
 }
+
+h4 {
+	@include mixins.heading-xl
+}
+
+h5 {
+	@include mixins.heading-lg
+}

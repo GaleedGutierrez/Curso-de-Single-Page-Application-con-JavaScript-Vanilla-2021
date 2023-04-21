@@ -9,23 +9,27 @@ const character = async (): Promise<string> => {
 		CHARACTER;
 
 	const CHARACTERISTICS = `
-		<h3>Episodes: <span>${episode.length}</span></h3>
-		<h3>Status: <span>${status}</span></h3>
-		<h3>Species: <span>${species}</span></h3>
-		<h3>Gender: <span>${gender}</span></h3>
-		<h3>Origin: <span>${origin.name}</span></h3>
-		<h3>Last Location: <span>${location.name}</span></h3>
+		<h5>Episodes: <span class="a-lead-characteristics">${episode.length}</span></h5>
+		<h5>Status: <span class="a-lead-characteristics">${status}</span></h5>
+		<h5>Species: <span class="a-lead-characteristics">${species}</span></h5>
+		<h5>Gender: <span class="a-lead-characteristics">${gender}</span></h5>
+		<h5>Origin: <span class="a-lead-characteristics">${origin.name}</span></h5>
+		<h5>Last Location: <span class="a-lead-characteristics">${location.name}</span></h5>
 	`;
 	const VIEW = `
-		<div class="characters-inner">
-			<article class="character-card">
-				<img src="${image}" alt="${name}"/>
-				<h2>${name}</h2>
+		<section class="g-main__character-details">
+			<article class="m-card-details">
+				<figures>
+					<img src="${image}" alt="${name}" class="m-card-details__img" />
+				</figures>
+				<section class="m-card-details__info-container">
+					<h2 class="m-card-details__name">${name}</h2>
+					<article class="m-card-details__data-container">
+						${CHARACTERISTICS}
+					</article>
+				</section>
 			</article>
-			<article class="characters-card">
-				${CHARACTERISTICS}
-			</article>
-		</div>
+		</section>
 	`;
 
 	return VIEW;

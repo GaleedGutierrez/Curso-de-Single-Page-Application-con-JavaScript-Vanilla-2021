@@ -1,0 +1,7 @@
+@use "../settings/variables";
+@use "../tools/mixins";
+
+.g-footer {
+	margin-block-end: variables.$space-5;
+	text-align: center;
+}

@@ -1,9 +1,39 @@
+// Weight
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+
+// Font Family
 @font-face {
-	font-family: "Open Sans";
-	src: url("./assets/font-family/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+	font-family: Poppins;
+	src: url("./assets/font-family/Poppins/Poppins-Regular.ttf") format("truetype");
+	font-weight: $weight-regular;
+	font-style: normal;
 }
 
-$_font-family: "Open Sans", sans-serif;
+@font-face {
+	font-family: Poppins;
+	src: url("./assets/font-family/Poppins/Poppins-Medium.ttf") format("truetype");
+	font-weight: $weight-medium;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Poppins;
+	src: url("./assets/font-family/Poppins/Poppins-SemiBold.ttf") format("truetype");
+	font-weight: $weight-semibold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Poppins;
+	src: url("./assets/font-family/Poppins/Poppins-Bold.ttf") format("truetype");
+	font-weight: $weight-bold;
+	font-style: normal;
+}
+
+$_font-family: "Poppins", sans-serif;
 $primary-font: $_font-family;
 
 // Typography scale
@@ -31,11 +61,6 @@ $lh-5: 3.2rem;
 $lh-6: 4rem;
 $lh-7: 4.8rem;
 
-// Weight
-$weight-regular: 400;
-$weight-medium: 500;
-$weight-semibold: 600;
-$weight-bold: 700;
 
 
 

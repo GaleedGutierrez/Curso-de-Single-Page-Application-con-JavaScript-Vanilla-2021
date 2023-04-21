@@ -1,7 +1,10 @@
 @use "../settings/variables";
+@use "../tools/mixins";
 
 body {
+	background-color: variables.$background-dark-color;
 	font-family: variables.$primary-font;
-	font-size: variables.$fs-body-md;
 	color: variables.$text-color;
+
+	@include mixins.body-lg;
 }

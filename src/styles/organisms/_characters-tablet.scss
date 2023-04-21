@@ -1,0 +1,6 @@
+@use "../settings/variables";
+
+.g-main__characters {
+	max-width: variables.$max-width;
+	margin-inline: auto;
+}

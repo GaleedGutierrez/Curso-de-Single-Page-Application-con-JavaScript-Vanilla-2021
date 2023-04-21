@@ -1,20 +1,32 @@
-$_cultured: #f4f4f4;
-$_arsenic: #3c484e;
-$_medium-jungle-green: #15302C;
-$_sea-blue: #026C86;
-$primary-color: $_cultured;
-$primary-dark-color: $_medium-jungle-green;
+// Base colors
+$_white: #fff;
+$_anti-flash-white: #f2f2f2;
+$_light-gray: #d1d3d4;
+$_lavender: #e3f2fd;
+$_spanish-gray: #999;
+$_gunmetal: #2a313b;
+$_raisin-black: #212122;
+$_black: #000;
+$_strawberry: #F95794;
+$_irresistible: #b6406c;
+$_carnation-pink: #fba3c4;
 
-// $background-dark-color: $_baltic-sea;
-// $background-darker-color: $_cod-gray;
-$background-light-color: $_cultured;
+// Gral
+$neutral-shade: $_raisin-black;
 
-// $background-lighter-color: $_white;
+// Primary
+$primary-color: $_strawberry;
+$primary-shade-1: $_carnation-pink;
+$primary-shade-2: $_irresistible;
 
-$text-color: $_medium-jungle-green;
-$text-name-character-color: $_sea-blue;
+// Background
+$background-dark-color: $_gunmetal;
 
-// $text-header-color: $_medium-jungle-green;
+// Text
+$text-dark-color: $_light-gray;
+$text-color: $_anti-flash-white;
 
-// $border-color: $_dove-gray;
-// $border-inverted-color: $_gallery;
+
+// Color
+$dark-color: $_black;
+$white-color: $_white;

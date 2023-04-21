@@ -1,0 +1,10 @@
+@use "../settings/variables";
+
+.g-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: variables.$max-width;
+	height: variables.$space-20;
+	padding-inline: variables.$space-4;
+}
