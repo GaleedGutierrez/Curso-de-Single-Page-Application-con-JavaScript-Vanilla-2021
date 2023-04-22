@@ -5,9 +5,9 @@ En este proyecto 🚀, desarrollé una Single Page Application (SPA) 🌐 que co
 💀 Estado.
 👩‍👩‍👧‍👦 Género.
 🌎 Origen.
-🌠 Ubicación actual en la serie. 
+🌠 Ubicación actual en la serie.
 
-![Screenshot del proyecto](s "../assets/screenshot.png")
+![Screenshot del proyecto](./assets/screenshot.png)
 
 ## La SPA fue construida con
 🟠 HTML para la estructura básica de la página.
@@ -15,6 +15,8 @@ En este proyecto 🚀, desarrollé una Single Page Application (SPA) 🌐 que co
 🔵 TypeScript para escribir el código lógico de la aplicación.
 ⚡ Vite como herramienta de desarrollo para facilitar el proceso de creación y prueba de la SPA. 
 
+
+## Curso
 Este proyecto es parte del Curso de Single Page Application con JavaScript Vanilla de Platzi 🎓, donde aprendí a crear una aplicación web dinámica y responsiva con JavaScript puro 🟡. Sin embargo, opté por usar TypeScript como lenguaje de programación para aprovechar las ventajas de un sistema de tipos estático y una mayor confiabilidad al escribir código. Así, pude crear una SPA más robusta y escalable 💪.
 
 <h2 align="center"> Work together 😄 </h2>
